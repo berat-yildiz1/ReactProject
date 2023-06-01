@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Header = () => {
-  return <header></header>
+  return <header>Random User List</header>
 }
 
 export default Header

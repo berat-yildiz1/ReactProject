@@ -24,7 +24,7 @@ const UserList = () => {
         {users.map((user, idx) => (
           <li>
             {' '}
-            <SingleUser user={user} key={idx} />{' '}
+            <SingleUser usera={user} userb={user}  key={idx} />{' '}
           </li>
         ))}
       </ul>

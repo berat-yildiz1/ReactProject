@@ -13,7 +13,10 @@ const UserList = () => {
     const response = await axios.get('https://randomuser.me/api/?results=5')
     setUsers(response.data.results)
   }
-
+  const removeUser=(deletedItem)=>{
+    setUsers(users.filter(q=>q.name.first !== deletedItem));
+    alert(`${deletedItem}'Kullanici Silindi'`)
+  }
   useEffect(() => {
     fetchUsers()
   }, [])
@@ -24,7 +27,7 @@ const UserList = () => {
         {users.map((user, idx) => (
           <li>
             {' '}
-            <SingleUser usera={user} userb={user}  key={idx} />{' '}
+            <SingleUser usera={user} userb={user} deleteItemProp={removeUser} key={idx} />{' '}
           </li>
         ))}
       </ul>

@@ -11,6 +11,7 @@
   }
   
   .single-user {
+    position: relative;
     display: flex;
     align-items: center;
     min-width: 400px;
@@ -30,4 +31,15 @@
   
   .user-info .user-mail {
     margin: 10px 0;
+  }
+  .delete-icon{
+    position: absolute;
+    top:20px;
+    right:10px;
+  }
+  .delete-icon:hover{
+    color: rgb(160, 35, 35);
+    transition: 0.51s;
+    transform: scale(1.2);
+    cursor: pointer;
   }
